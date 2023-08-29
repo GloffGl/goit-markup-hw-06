@@ -50,6 +50,10 @@ h6 {
   margin: 0;
 }
 
+p {
+  margin: 0;
+}
+
 ul,
 ol {
   margin: 0;
@@ -932,6 +936,7 @@ screen and (min-resolution: 2dppx) {
   font-size: 12px;
   font-weight: 400;
   line-height: 1.5;
+  padding-left: 12px;
   letter-spacing: 0.04em;
   color: var(--white);
   border-radius: 4px;
@@ -1058,13 +1063,19 @@ input::placeholder {
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
-  width: 408px;
+  max-width: 408px;
   min-height: 584px;
   border-radius: 4px;
   background: var(--dairy, #FCFCFC);
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
   transition: transform var(--animation);
   padding: 72px 24px 24px 24px;
+  width: calc(100% - 36px);
+}
+@media only screen and (max-width: 767.98px) {
+  .modal {
+    max-width: 392px;
+  }
 }
 
 .modal-btn {
@@ -1104,12 +1115,7 @@ input::placeholder {
   fill: #ffffff;
 }
 
-@media only screen and (max-width: 767.98px) {
-  .modal {
-    max-width: 392px;
-    width: 100%;
-  }
-}
+
 
 /* Modal form */
 .modal-name {
@@ -1256,11 +1262,9 @@ input[type="checkbox"]:checked+.checkbox-privacy>.checkbox-vector {
 /* Mobile menu */
 .box-mobile-menu {
   position: relative;
-  max-width: 428px;
-  min-width: 320px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   padding-left: 40px;
+  padding-right: 35px;
   padding-top: 80px;
   padding-bottom: 40px;
   display: flex;
@@ -1269,8 +1273,6 @@ input[type="checkbox"]:checked+.checkbox-privacy>.checkbox-vector {
 }
 
 .menu-toggle {
-  min-height: 22px;
-  min-width: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1278,9 +1280,11 @@ input[type="checkbox"]:checked+.checkbox-privacy>.checkbox-vector {
   padding: 0;
   background-color: transparent;
   cursor: pointer;
-  border: none;
-  border-radius: 50%;
   outline: none;
+  width: 24px;
+  height: 24px;
+  border: 1px solid var(--cornflower);
+  border-radius: 50%;
 }
 
 @media only screen and (min-width: 768px) {
@@ -1339,12 +1343,6 @@ input[type="checkbox"]:checked+.checkbox-privacy>.checkbox-vector {
   text-transform: capitalize;
 }
 
-.box-close-menu {
-  width: 24px;
-  height: 24px;
-  border: 1px solid var(--cornflower);
-  border-radius: 50%;
-}
 
 .link-mobile-menu:active {
   color: var(--ocean);
@@ -1368,13 +1366,12 @@ input[type="checkbox"]:checked+.checkbox-privacy>.checkbox-vector {
   gap: 56px;
   padding-left: 0;
   margin: 0;
-  width: 328px;
+  width: 100%;
 }
 
 @media only screen and (max-width: 428px) {
   .mobile-menu-socials {
     gap: 18px;
-    width: 214px;
   }
 }
 
