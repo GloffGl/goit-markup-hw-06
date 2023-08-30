@@ -1070,12 +1070,10 @@ input::placeholder {
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
   transition: transform var(--animation);
   padding: 72px 24px 24px 24px;
-  width: calc(100% - 36px);
 }
 @media only screen and (max-width: 767.98px) {
   .modal {
-    max-width: 392px;
-  }
+  width: calc(100% - 36px);  }
 }
 
 .modal-btn {
