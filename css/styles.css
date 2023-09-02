@@ -345,6 +345,8 @@ screen and (min-resolution: 2dppx) {
     padding-bottom: 188px;
     font-size: 56px;
     line-height: 1.07;
+    max-width: 1440px;
+    margin: 0 auto;
   }
 
   .hero-title {
